@@ -1,0 +1,28 @@
+/** @format */
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 80px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.btnDelete {
+  z-index: 10;
+  cursor: pointer;
+  &:hover {
+    filter: invert(1);
+  }
+}
