@@ -13,7 +13,7 @@ https://upload-applicationz.surge.sh
 Clone the project
 
 ```bash
-  git clone https://github.com/boybubbles/drag-n-drop.git
+  git clone https://github.com/boybubbles/drag-drop.git
 ```
 
 Go to the project directory
