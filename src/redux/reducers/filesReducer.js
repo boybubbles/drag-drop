@@ -12,10 +12,20 @@ const filesReducer = createSlice({
   initialState,
   reducers: {
     getFiles: (state, actions) => {
-      state.data = actions.payload;
+      state.data = actions.payload.map((item) => ({
+        ...item,
+        path: `https://back-end-nodejs1.herokuapp.com${item.path}`,
+      }));
+    },
+    updateFileWithId: (state, actions) => {
+      const index = state.data.findIndex(
+        (item) => item.localID === actions.payload.localID
+      );
+      console.log(actions);
+      state.data[index] = actions.payload;
     },
     updateFiles: (state, actions) => {
-      if (actions.payload.status === 200) {
+      if (actions.payload?.status === 200) {
         state.data.push(actions.payload);
       } else {
         state.errorMesssages = actions.payload;
@@ -29,6 +39,7 @@ const filesReducer = createSlice({
   },
 });
 
-export const { deleteFiles, updateFiles, getFiles } = filesReducer.actions;
+export const { updateFileWithId, deleteFiles, updateFiles, getFiles } =
+  filesReducer.actions;
 
 export default filesReducer.reducer;

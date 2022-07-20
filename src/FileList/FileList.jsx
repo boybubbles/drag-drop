@@ -59,7 +59,7 @@ const FileList = () => {
             <img
               id={index}
               style={{ cursor: "pointer" }}
-              src={`https://back-end-nodejs1.herokuapp.com${item.path}`}
+              src={item.path}
               alt="..."
               key={index}
             />
