@@ -6,7 +6,7 @@ A website that helps to upload small size images quickly.
 
 ## Demo
 
-https://upload-applicationz.surge.sh
+https://uploaderzzz.surge.sh
 
 ## Run Locally
 
